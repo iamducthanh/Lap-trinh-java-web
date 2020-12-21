@@ -9,11 +9,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = {"/admin"})
+import com.laptrinhjavaweb.model.UserModel;
+
+@WebServlet(urlPatterns = {"/admin-home"})
 public class HomeController extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		UserModel userModel = new UserModel();
+		userModel.setFullname("Hello tao là admin");
+		req.setAttribute("model", userModel);
 		RequestDispatcher rd = req.getRequestDispatcher("/views/admin/admin.jsp");
 		rd.forward(req, resp);
 	}

@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.laptrinhjavaweb.model.UserModel;
+
 @WebServlet(urlPatterns = {"/trang-chu"})
 public class HomeController extends HttpServlet{
 	
@@ -24,9 +26,6 @@ public class HomeController extends HttpServlet{
 		super.doPost(req, resp);
 	}
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 2686801510274002166L;
 	
 }
