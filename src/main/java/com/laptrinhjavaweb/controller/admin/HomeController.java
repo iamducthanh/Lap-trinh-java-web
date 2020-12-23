@@ -16,9 +16,6 @@ public class HomeController extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		UserModel userModel = new UserModel();
-		userModel.setFullname("Hello tao l� admin");
-		req.setAttribute("model", userModel);
 		RequestDispatcher rd = req.getRequestDispatcher("/views/admin/home.jsp");
 		rd.forward(req, resp);
 	}

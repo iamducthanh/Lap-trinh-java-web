@@ -1,28 +1,47 @@
 package com.laptrinhjavaweb.model;
 
-public class UserModel {
-	private String username;
-	private String fullname;
-	
-	public String getUsername() {
-		return username;
+public class UserModel extends AbstracModel{
+	private String userName;
+	private String fullName;
+	private String password;
+	private int status;
+	private Long roleId;
+	private RoleModel role = new RoleModel();
+
+	public String getUserName() {
+		return userName;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
-	public String getFullname() {
-		return fullname;
+	public String getFullName() {
+		return fullName;
 	}
-	public void setFullname(String fullname) {
-		this.fullname = fullname;
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
-	
-	public UserModel() {
-		// TODO Auto-generated constructor stub
+	public String getPassword() {
+		return password;
 	}
-	public UserModel(String username, String fullname) {
-		super();
-		this.username = username;
-		this.fullname = fullname;
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public int getStatus() {
+		return status;
+	}
+	public void setStatus(int status) {
+		this.status = status;
+	}
+	public Long getRoleId() {
+		return roleId;
+	}
+	public void setRoleId(Long roleId) {
+		this.roleId = roleId;
+	}
+	public RoleModel getRole() {
+		return role;
+	}
+	public void setRole(RoleModel role) {
+		this.role = role;
 	}
 }
